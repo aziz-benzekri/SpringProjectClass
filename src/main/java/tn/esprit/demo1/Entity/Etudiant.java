@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -24,4 +25,6 @@ public class Etudiant implements Serializable {
     private String ecole ;
     @Temporal(TemporalType.DATE)
     private Date dateNaissance ;
+    @OneToMany(mappedBy = "etudiant")
+    private Set<Reservation> reservation ;
 }

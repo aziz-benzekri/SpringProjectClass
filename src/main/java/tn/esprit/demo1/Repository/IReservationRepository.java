@@ -21,5 +21,6 @@ public interface IReservationRepository extends CrudRepository<Reservation,Strin
             "AND FUNCTION('YEAR', r.anneeUniversitaire) = :anneeUniversite")
     List<Reservation> getReservationParAnneeUniversitaireEtNomUniversite(
             Date anneeUniversite, String nomUniversite);
+    
 
 }

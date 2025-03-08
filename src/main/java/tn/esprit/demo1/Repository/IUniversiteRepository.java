@@ -1,4 +1,7 @@
 package tn.esprit.demo1.Repository;
 
-public interface IUniversiteRepository {
+import org.springframework.data.repository.CrudRepository;
+import tn.esprit.demo1.Entity.Universite;
+
+public interface IUniversiteRepository extends CrudRepository<Universite,Long> {
 }

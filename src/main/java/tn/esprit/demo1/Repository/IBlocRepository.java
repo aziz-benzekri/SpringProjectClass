@@ -1,4 +1,7 @@
 package tn.esprit.demo1.Repository;
 
-public interface IBlocRepository {
+import org.springframework.data.repository.CrudRepository;
+import tn.esprit.demo1.Entity.Bloc;
+
+public interface IBlocRepository extends CrudRepository<Bloc,Long> {
 }

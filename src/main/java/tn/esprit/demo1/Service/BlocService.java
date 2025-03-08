@@ -6,6 +6,7 @@ import tn.esprit.demo1.Entity.Bloc;
 import tn.esprit.demo1.Repository.IBlocRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -30,7 +31,7 @@ public class BlocService implements IBlocService {
     }
 
     @Override
-    public List<Bloc> retrieveBloc(long idBloc) {
+    public Optional<Bloc> retrieveBloc(long idBloc) {
         return blocRepository.findById(idBloc);
     }
 

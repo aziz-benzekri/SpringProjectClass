@@ -19,10 +19,12 @@ public class Reservation implements Serializable {
     @Id
     private String idReservation;
     @Temporal(TemporalType.DATE)
-    private Date dateNaissance;
+    private Date anneeUniversitaire ;
     private boolean estValide;
-    @ManyToOne
-    private Etudiant etudiant;
+
     @ManyToMany
     private Set<Etudiant> etudiants;
+
+    @ManyToOne()
+    private Chambre chambre;
 }

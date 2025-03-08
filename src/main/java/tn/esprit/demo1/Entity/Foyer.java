@@ -20,8 +20,9 @@ public class Foyer implements Serializable {
     private long idFoyer;
     private String nomFoyer;
     private long capaciteFoyer;
-    @OneToOne(mappedBy = "foyer")
+    @OneToOne()
     private Universite universite;
-    @OneToMany(mappedBy = "foyer")
+    @OneToMany()
     private List<Bloc> bloc ;
+
 }

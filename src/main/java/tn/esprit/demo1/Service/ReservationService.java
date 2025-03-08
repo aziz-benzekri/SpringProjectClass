@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.demo1.Entity.Reservation;
 import tn.esprit.demo1.Repository.IReservationRepository;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -27,5 +28,9 @@ public class ReservationService implements IReservationService {
     @Override
     public Reservation retrieveReservation(String idReservation) {
         return reservationRepository.findById(idReservation).orElse(null);
+    }
+
+    public List<Reservation> getReservationParAnneeUniversitaireEtNomUniversite(Date annee, String nomUniversite) {
+        return reservationRepository.getReservationParAnneeUniversitaireEtNomUniversite(annee, nomUniversite);
     }
 }

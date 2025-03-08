@@ -1,14 +1,12 @@
 package tn.esprit.demo1.Controller;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tn.esprit.demo1.Entity.Etudiant;
 import tn.esprit.demo1.Entity.Reservation;
 import tn.esprit.demo1.Service.IReservationService;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -30,5 +28,12 @@ public class ReservationController {
 
         return reservationService.updateReservation(reservation).getEtudiant();
     }
+
+
+    @GetMapping("/par-annee-universitaire/{anneUniversitaire}/{nomUniversite}")
+    public List<Reservation> getReservations(
+            @PathVariable("anneUniversitaire") Date anneeUniv, @PathVariable("nomUniversite") String nomUniversite) {
+        return reservationService.getReservationParAnneeUniversitaireEtNomUniversite(anneeUniv, nomUniversite);
+          }
 
 }

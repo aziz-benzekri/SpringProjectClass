@@ -9,6 +9,6 @@ public interface IBlocService {
     List<Bloc> retrieveBlocs();
     Bloc updateBloc (Bloc bloc);
     Bloc addBloc (Bloc bloc);
-    Optional<Bloc> retrieveBloc (long idBloc);
+    Bloc retrieveBloc (long idBloc);
     void removeBloc (long idBloc);
 }

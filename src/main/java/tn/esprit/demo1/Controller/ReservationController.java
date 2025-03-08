@@ -24,9 +24,9 @@ public class ReservationController {
     }
 
     @GetMapping("/update/{Reservation}")
-    public Etudiant updateEtudiant(@PathVariable Reservation reservation) {
+    public Reservation updateReservation(@PathVariable Reservation reservation) {
 
-        return reservationService.updateReservation(reservation).getEtudiant();
+        return reservationService.updateReservation(reservation);
     }
 
 

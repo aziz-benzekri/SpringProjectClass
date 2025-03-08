@@ -31,8 +31,8 @@ public class BlocService implements IBlocService {
     }
 
     @Override
-    public Optional<Bloc> retrieveBloc(long idBloc) {
-        return blocRepository.findById(idBloc);
+    public Bloc retrieveBloc(long idBloc) {
+        return blocRepository.findById(idBloc).get();
     }
 
     @Override

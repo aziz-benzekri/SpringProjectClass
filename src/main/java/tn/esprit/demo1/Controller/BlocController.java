@@ -25,7 +25,8 @@ public class BlocController {
 
     @GetMapping("get-by-id/{id}")
     public Bloc getBlocById(@PathVariable long id) {
-        return (Bloc) blocService.retrieveBloc(id);
+
+        return blocService.retrieveBloc(id);
     }
 
     @GetMapping("get-all")

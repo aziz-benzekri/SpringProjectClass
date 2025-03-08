@@ -35,5 +35,6 @@ public class ReservationController {
             @PathVariable("anneUniversitaire") Date anneeUniv, @PathVariable("nomUniversite") String nomUniversite) {
         return reservationService.getReservationParAnneeUniversitaireEtNomUniversite(anneeUniv, nomUniversite);
           }
+          
 
 }
